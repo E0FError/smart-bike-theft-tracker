@@ -14,6 +14,8 @@ Altium Designer project for the **Smart Bike Theft Tracker**
 | `*.Harness` | Harness definitions for the sheet ports |
 | `Smart Bike Theft Tracker.PcbDoc` | 4-layer PCB layout |
 | `Schlib1.SchLib` / `PcbLib1.PcbLib` | Symbols and footprints |
+| `Smart_Bike_Theft_Tracker_Schematics.pdf` | All schematic sheets, exported from Altium |
+| `Smart_Bike_Theft_Tracker.step` | 3D STEP model of the assembled board |
 | `Group11_BOM.csv` | BOM exported by `../analysis/extract_bom.py` |
 
 ## Opening the project

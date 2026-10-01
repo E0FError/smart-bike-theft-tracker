@@ -204,12 +204,37 @@ daisy-chaining loads, so transient currents do not create local supply dips:
 
 ## 6. Schematic & PCB
 
-The complete Altium project (four hierarchical schematic sheets, harness
-definitions, symbol/footprint libraries and the 4-layer PCB) is in
-[`hardware/`](hardware/). High-resolution schematic and PCB images exported from
-Altium are collected in [`images/altium/`](images/altium/); see that folder for
-the export list. The tool [`tools/render_schdoc.py`](tools/render_schdoc.py)
-can additionally render any sheet straight from a `.SchDoc` without Altium.
+The design is captured as a **four-sheet hierarchical schematic** plus a
+**4-layer PCB**. The full schematic PDF is in
+[`hardware/Smart_Bike_Theft_Tracker_Schematics.pdf`](hardware/Smart_Bike_Theft_Tracker_Schematics.pdf).
+
+**Top hierarchy** — the four functional blocks and the harness ports between
+them:
+
+![Top hierarchy sheet](images/altium/schematic-top.png)
+
+| Power — charger + buck-boost | MCU + LoRaWAN |
+|---|---|
+| ![Power schematic](images/altium/schematic-power.png) | ![MCU schematic](images/altium/schematic-mcu.png) |
+| **Accelerometer (GyroSense)** | **GPS** |
+| ![Accelerometer schematic](images/altium/schematic-gyrosense.png) | ![GPS schematic](images/altium/schematic-gps.png) |
+
+### PCB layout
+
+The top-copper view shows the RF feeds, the star-distributed 3.3 V rail and the
+connector placement (USB-C, JST, SMA, U.FL):
+
+![PCB top layer](images/altium/pcb-layout-top.png)
+
+### 3D model
+
+The board was exported from Altium as a STEP model and rendered directly into
+the image below — no screenshot required — with
+[`tools/render_step_3d.py`](tools/render_step_3d.py) (Open CASCADE tessellation
+via gmsh + shaded matplotlib). The native model is kept in
+[`hardware/Smart_Bike_Theft_Tracker.step`](hardware/Smart_Bike_Theft_Tracker.step).
+
+![3D render of the tracker PCB](images/altium/pcb-3d.png)
 
 ---
 
@@ -224,6 +249,8 @@ smart-bike-theft-tracker/
 │   ├── GyroSense.SchDoc  GPS.SchDoc  *.Harness
 │   ├── Smart Bike Theft Tracker.PcbDoc    # 4-layer PCB
 │   ├── Schlib1.SchLib  PcbLib1.PcbLib
+│   ├── Smart_Bike_Theft_Tracker_Schematics.pdf   # all sheets
+│   ├── Smart_Bike_Theft_Tracker.step              # 3D model
 │   └── Group11_BOM.csv
 ├── docs/
 │   ├── Group11_Final_Project_Report.pdf   # the submitted report
@@ -234,13 +261,14 @@ smart-bike-theft-tracker/
 │   ├── extract_bom.py                     # SchDoc -> BOM CSV
 │   └── power_budget.json
 ├── tools/
+│   ├── render_step_3d.py                  # STEP -> shaded 3D PNG
 │   ├── render_schdoc.py                   # Altium SchDoc -> SVG renderer
 │   └── altium_preview_to_png.py
 └── images/
     ├── system-block-diagram.jpg  power-budget.png
     ├── rf-gps-antenna-feed.png   rf-lora-antenna-feed.png
     ├── power-distribution.png
-    └── altium/                            # Altium exports (schematics, PCB)
+    └── altium/                            # exported schematic + PCB images
 ```
 
 ## 8. Reproducing the analysis
@@ -251,7 +279,11 @@ No third-party packages are required:
 python3 analysis/power_budget.py      # power budget, LDO/SMPS, battery life + figure
 python3 analysis/extract_bom.py       # regenerate hardware/Group11_BOM.csv
 python3 tools/render_schdoc.py hardware/MCU.SchDoc mcu.svg --title "MCU"
+python3 tools/render_step_3d.py hardware/Smart_Bike_Theft_Tracker.step pcb-3d.png
 ```
+
+`render_step_3d.py` needs `gmsh`, `numpy` and `matplotlib`; the other scripts
+are standard-library only.
 
 To inspect the hardware, open the `.PrjPcb` in **Altium Designer**.
 
