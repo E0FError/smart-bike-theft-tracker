@@ -228,10 +228,7 @@ connector placement (USB-C, JST, SMA, U.FL):
 
 ### 3D model
 
-The board was exported from Altium as a STEP model and rendered directly into
-the image below — no screenshot required — with
-[`tools/render_step_3d.py`](tools/render_step_3d.py) (Open CASCADE tessellation
-via gmsh + shaded matplotlib). The native model is kept in
+An isometric view of the assembled board. The native 3D model is included in
 [`hardware/Smart_Bike_Theft_Tracker.step`](hardware/Smart_Bike_Theft_Tracker.step).
 
 ![3D render of the tracker PCB](images/altium/pcb-3d.png)
@@ -261,9 +258,7 @@ smart-bike-theft-tracker/
 │   ├── extract_bom.py                     # SchDoc -> BOM CSV
 │   └── power_budget.json
 ├── tools/
-│   ├── render_step_3d.py                  # STEP -> shaded 3D PNG
-│   ├── render_schdoc.py                   # Altium SchDoc -> SVG renderer
-│   └── altium_preview_to_png.py
+│   └── render_schdoc.py                   # Altium SchDoc -> SVG renderer
 └── images/
     ├── system-block-diagram.jpg  power-budget.png
     ├── rf-gps-antenna-feed.png   rf-lora-antenna-feed.png
@@ -279,11 +274,7 @@ No third-party packages are required:
 python3 analysis/power_budget.py      # power budget, LDO/SMPS, battery life + figure
 python3 analysis/extract_bom.py       # regenerate hardware/Group11_BOM.csv
 python3 tools/render_schdoc.py hardware/MCU.SchDoc mcu.svg --title "MCU"
-python3 tools/render_step_3d.py hardware/Smart_Bike_Theft_Tracker.step pcb-3d.png
 ```
-
-`render_step_3d.py` needs `gmsh`, `numpy` and `matplotlib`; the other scripts
-are standard-library only.
 
 To inspect the hardware, open the `.PrjPcb` in **Altium Designer**.
 
