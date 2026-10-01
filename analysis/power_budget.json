@@ -1,0 +1,74 @@
+{
+  "power_budget": {
+    "states": [
+      "SLEEP",
+      "GPS_FIX",
+      "LORA_TX"
+    ],
+    "components_mA": {
+      "MCU": {
+        "SLEEP": 0.000125,
+        "GPS_FIX": 1.1,
+        "LORA_TX": 1.1
+      },
+      "GPS": {
+        "SLEEP": 11.0,
+        "GPS_FIX": 47.0,
+        "LORA_TX": 11.0
+      },
+      "Backup battery": {
+        "SLEEP": 0.879,
+        "GPS_FIX": 0.0,
+        "LORA_TX": 0.0
+      },
+      "Accelerometer": {
+        "SLEEP": 0.03,
+        "GPS_FIX": 0.03,
+        "LORA_TX": 0.03
+      }
+    },
+    "component_sum_mA": {
+      "SLEEP": 11.909125,
+      "GPS_FIX": 48.13,
+      "LORA_TX": 12.13
+    },
+    "smps": {
+      "SLEEP": {
+        "iout_ma": 12.0,
+        "eff": 0.75
+      },
+      "GPS_FIX": {
+        "iout_ma": 48.0,
+        "eff": 0.85
+      },
+      "LORA_TX": {
+        "iout_ma": 12.0,
+        "eff": 0.75
+      }
+    },
+    "battery_discharge_mA": {
+      "SLEEP": 14.666666666666664,
+      "GPS_FIX": 51.764705882352935,
+      "LORA_TX": 14.666666666666664
+    },
+    "daily_mAh": 353.6633333333333,
+    "battery_mAh": 1900.0,
+    "battery_life_days": 5.372340926870188
+  },
+  "ldo_vs_smps": {
+    "ldo": {
+      "part": "MCP1700",
+      "vin_min_V": 3.749,
+      "loss_mW": 33.22600000000002,
+      "iq_uA": 4.0
+    },
+    "smps": {
+      "part": "TPS63001",
+      "vin_min_V": 1.8,
+      "loss_mW": 27.133333333333344,
+      "iq_uA": 51.5
+    },
+    "vbat_min_V": 3.0,
+    "pout_mW": 244.2
+  }
+}

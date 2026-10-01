@@ -1,0 +1,44 @@
+Sheet,Reference,Value,Library Reference,Footprint,Description
+BatteryCharger,BAT1,B2B-XH-A,B2B-XH-A,,
+BatteryCharger,C1,4u7,CAP_0603,,Capacitor SMD 0603
+BatteryCharger,C2,4u7,CAP_0603,,Capacitor SMD 0603
+BatteryCharger,C3,10u,CAP_0603,,Capacitor SMD 0603
+BatteryCharger,C4,100n,CAP_0603,,Capacitor SMD 0603
+BatteryCharger,C5,10u,CAP_0603,,Capacitor SMD 0603
+BatteryCharger,C6,10u,CAP_0603,,Capacitor SMD 0603
+BatteryCharger,D1,598-8110-107F,RED_LED_0805,,"598-8110-107F 598-8110-107F, Dialight, SMD LED 0805 Package, Red Single color SOLD IN INCREMENTS OF 4000. (REEL)"
+BatteryCharger,D3,SMAJ5.0A,SMAJ5.0A,,ESD Protection Diode
+BatteryCharger,L1,VLS4012ET-2R2M,VLS4012ET-2R2M,,"INDUCTOR, 2.2UH, 2.2A, 20%, SMD; Product Range:TDK - VLS-E Series; Inductance:2.2ÂµH; Inductance Tolerance:Â± 20%; Inductor Construction:Shielded; DC Resistance Max:0.081ohm; RMS Current (Irms):2.2A; Saturation Current (Isat):1.9A; Case Dimensions:4mm x 4mm x 1.2mm; SVHC:No SVHC (20-Jun-2013)"
+BatteryCharger,R1,5k1,RES_0603,,Resistor SMD 0603
+BatteryCharger,R2,5k1,RES_0603,,Resistor SMD 0603
+BatteryCharger,R3,140R,RES_0603,,Resistor SMD 0603
+BatteryCharger,R4,1k05,RES_0603,,Resistor SMD 0603
+BatteryCharger,R5,100R,RES_0603,,Resistor SMD 0603
+BatteryCharger,SW2,500SSP1S1M2QEA,500SSP1S1M2QEA,,"SLIDE, 5A, 120VAC/28VDC SPDT, On-On Through Hole"
+BatteryCharger,U1,MCP73831T-2ACI/OT,MCP73831T-2ACI/OT,,Li-Ion Charge Controller 4.2V SOT23-5
+BatteryCharger,U2,TPS63001DRCR,TI-TPS63001DRC10-3000X1650TP,,"Buck-Boost Voltage Converter with 1.8 to 5.5 V Input and 3.3 V Output, -40 to 85 degC, 10-Pin SON (DRC), Green (RoHS & no Sb/Br)"
+BatteryCharger,USB1,USB4125-GF-A-0190,USB type-C,,CONN RCPT TYPE C 6P SMD RA
+GPS,BAT2,2998,2998,,BATTERY RETAINER COIN 6.8MM SMD
+GPS,C10,1u,CAP_0603,,Ceramic Capacitor SMD 0603
+GPS,D2,STPS0540Z,DSKY-AK-2,,"Schottky Rectifier, 0.5 A, 40 V, 2-Pin SOP (SOD-123), RoHS, Tape and Reel"
+GPS,D4,LTST-C171KGKT,8706943c75ba83719d021d2fdc84c58,,LED GREEN CLEAR SMD
+GPS,J2,A-1JB,A-1JB,,"U.FL (UMCC), AMC Connector Jack, Male Pin 50 Ohms Surface Mount Solder"
+GPS,L3,LQG18HN27NJ00D,LQG18HN27NJ00D,,Ind RF Chip Multi-Layer 27nH 5% 100MHz 12Q-Factor Air 300mA 0603 Paper T/R
+GPS,Q5,CSD13381F4,9fa42dd10ff43da9cbcc9b3293ff909,,MOSFET N-CH 12V 2.1A 3PICOSTAR
+GPS,R10,22R,RES_0603,,Resistor SMD 0603
+GPS,R8,1k,RES_0603,,Resistor SMD 0603
+GPS,R9,3k3,RES_0603,,Resistor SMD 0603
+GPS,U5,NEO-6M-0-001,NEO-6M-0-001,,GPS Module
+GyroSense,C_A1,0.1 uF,CAP_0603,,Capacitor SMD 0603
+GyroSense,C_A2,10 uF,CAP_0603,,Capacitor SMD 0603
+GyroSense,R11,4.7K,RES_0603,,Resistor SMD 0603
+GyroSense,U6,ADXL345BCCZ-RL7,ADXL345BCCZ-RL7,,"ADXL345BCCZ-RL7 Analog Devices, 3-Axis Accelerometer, I2C, SPI, 14-Pin LGA 0.3 V to +3.9 V 40C to +105C"
+MCU,C7,AC0805KKX7R5BB105,11868f565c42a9108669ba33697ecf6,,AC0805 1 uF X7R 10.00% 6.3 V
+MCU,C8,Capacitor,CAP_0603,,Capacitor SMD 0603
+MCU,C9,Capacitor,CAP_0603,,Capacitor SMD 0603
+MCU,J1,SMA-J-P-H-ST-EM1,LoRa antenna connector,,CONN SMA JACK STR 50OHM EDGE MNT
+MCU,L2,0R,Inductor,,Not necessary. Place 0 ohm resistor
+MCU,R6,4k7,RES_0603,,Resistor SMD 0603
+MCU,R7,4k7,RES_0603,,Resistor SMD 0603
+MCU,SW1,TL3301AF160QG,94cebf9f54af8bed749b87481745719,,SWITCH TACTILE SPST-NO 0.05A 12V
+MCU,U3,STM32WL5MOCH6TR,STM32WL5MOCH6TR,,"Multiprotocol LPWAN dual-core module 32-bit Arm Cortex-M4/M0+ LoRa,(G)FSK, (G)MSK, BPSK"

@@ -1,0 +1,24 @@
+# ---- Altium Designer ----
+**/__Previews/
+**/History/
+Project Logs*/
+Project Outputs*/
+*.PcbDoc.htm
+**/*.ldb
+*.metadata
+*.PrjPcbStructure
+*.PrjMbdStructure
+CompareHistory/
+*.~(1).*
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ---- OS / editors ----
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
